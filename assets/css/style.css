@@ -120,7 +120,7 @@ body {
 /* Header Styles */
 header {
     text-align: center;
-    padding: 30px 20px;
+    padding: 20px 10px;
     color: white;
     flex-shrink: 0;
 }
@@ -301,10 +301,30 @@ p {
 
 /* Intro Section */
 .intro {
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
-    padding: 30px;
-    border-radius: 15px;
-    border-left: 5px solid #667eea;
+    background: white;
+    padding: 50px 40px;
+    border-radius: 20px;
+    border-left: 8px solid #667eea;
+    box-shadow: 0 8px 30px rgba(102, 126, 234, 0.2);
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.intro h2 {
+    color: #1a1a1a;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.intro p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    font-weight: 500;
 }
 
 /* Actions Section */
@@ -437,8 +457,18 @@ p {
     }
 
     .intro {
-        padding: 20px;
-        border-radius: 10px;
+        padding: 35px 25px;
+        border-radius: 15px;
+        border-left: 6px solid #667eea;
+    }
+
+    .intro h2 {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+
+    .intro p {
+        font-size: 1rem;
     }
 
     .disclaimer {
@@ -514,8 +544,20 @@ p {
     }
 
     .intro {
-        padding: 15px;
-        border-radius: 10px;
+        padding: 25px 18px;
+        border-radius: 12px;
+        border-left: 6px solid #667eea;
+        margin-bottom: 30px;
+    }
+
+    .intro h2 {
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+    }
+
+    .intro p {
+        font-size: 0.95rem;
+        line-height: 1.7;
     }
 
     .disclaimer {
@@ -605,4 +647,340 @@ p {
 .language-selector option {
     background: #333;
     color: white;
+}
+
+/* ============ HELP PAGE STYLES ============ */
+
+/* Emergency Notice Section */
+.emergency-notice {
+    margin-bottom: 40px;
+}
+
+.warning-box {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffe6e6 100%);
+    border-left: 6px solid #f44336;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(244, 67, 54, 0.15);
+}
+
+.warning-box h2 {
+    color: #c62828;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.emergency-number {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    margin: 25px 0;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border: 3px solid #f44336;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.emergency-number strong {
+    color: #333;
+    display: block;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.emergency-number .number {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #f44336;
+    display: block;
+    text-align: center;
+    font-family: 'Monaco', 'Courier New', monospace;
+    letter-spacing: 5px;
+    line-height: 1;
+}
+
+.warning-box p {
+    color: #d32f2f;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+/* Helpline Resources Section */
+.helpline-resources {
+    margin-bottom: 50px;
+}
+
+.helpline-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.helpline-card {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 18px;
+    padding: 35px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.helpline-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    border-color: #667eea;
+}
+
+.helpline-card h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.helpline-card p {
+    color: #34495e;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.helpline-card .number {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #001a59;
+    display: block;
+    text-align: center;
+    font-family: 'Monaco', 'Courier New', monospace;
+    letter-spacing: 3px;
+    margin: 20px 0;
+    line-height: 1;
+}
+
+.helpline-card small {
+    display: block;
+    color: #667eea;
+    font-size: 1rem;
+    font-style: italic;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+/* What to Expect Section */
+.what-to-expect {
+    margin-bottom: 50px;
+}
+
+.expectations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.expectation-item {
+    background: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 100%);
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 6px solid #009688;
+    box-shadow: 0 6px 20px rgba(0, 150, 136, 0.15);
+    transition: all 0.3s ease;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.expectation-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 150, 136, 0.25);
+}
+
+.expectation-item h3 {
+    color: #00695c;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.expectation-item p {
+    color: #004d40;
+    line-height: 1.8;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+/* Additional Resources Section */
+.additional-resources {
+    margin-bottom: 30px;
+}
+
+.resource-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
+}
+
+.resource-list li {
+    background: linear-gradient(135deg, #f3e5f5 0%, #e8d4f8 100%);
+    padding: 25px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    border-left: 6px solid #7b1fa2;
+    box-shadow: 0 5px 18px rgba(123, 31, 162, 0.15);
+    transition: all 0.3s ease;
+    font-size: 1.05rem;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.resource-list li:hover {
+    transform: translateX(8px);
+    box-shadow: 0 5px 18px rgba(123, 31, 162, 0.2);
+}
+
+.resource-list a {
+    color: #4a148c;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.resource-list a:hover {
+    color: #7b1fa2;
+    text-decoration: underline;
+}
+
+.resource-list li {
+    color: #5e35b1;
+    font-weight: 500;
+}
+
+/* Responsive Adjustments for Help Page */
+@media (max-width: 768px) {
+    .helpline-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .expectations {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .warning-box {
+        padding: 25px;
+    }
+
+    .emergency-number {
+        padding: 30px;
+        min-height: 120px;
+    }
+
+    .emergency-number .number {
+        font-size: 3rem;
+        letter-spacing: 3px;
+    }
+
+    .helpline-card {
+        padding: 28px;
+        min-height: 260px;
+    }
+
+    .helpline-card .number {
+        font-size: 3rem;
+        letter-spacing: 2px;
+    }
+
+    .expectation-item {
+        padding: 25px;
+        min-height: 160px;
+    }
+
+    .resource-list li {
+        padding: 20px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .helpline-grid {
+        gap: 18px;
+    }
+
+    .expectations {
+        gap: 18px;
+    }
+
+    .warning-box {
+        padding: 20px;
+    }
+
+    .emergency-number {
+        padding: 25px;
+        min-height: 110px;
+    }
+
+    .emergency-number strong {
+        font-size: 1.1rem;
+    }
+
+    .emergency-number .number {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+
+    .helpline-card {
+        padding: 20px;
+        min-height: 240px;
+    }
+
+    .helpline-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .helpline-card p {
+        font-size: 1rem;
+    }
+
+    .helpline-card .number {
+        font-size: 2.5rem;
+        letter-spacing: 1.5px;
+    }
+
+    .helpline-card small {
+        font-size: 0.95rem;
+    }
+
+    .expectation-item {
+        padding: 20px;
+        min-height: 150px;
+    }
+
+    .expectation-item h3 {
+        font-size: 1.15rem;
+        margin-bottom: 12px;
+    }
+
+    .expectation-item p {
+        font-size: 1rem;
+    }
+
+    .resource-list li {
+        padding: 18px;
+        margin-bottom: 12px;
+        font-size: 0.98rem;
+        min-height: 65px;
+    }
 }
