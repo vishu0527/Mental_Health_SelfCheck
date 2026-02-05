@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#667eea">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Breathing Exercise</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/breathing.css">
+</head>
+<body>
+    <div class="top-nav">
+        <div class="nav-brand">🧠 Mental Health Self-Check</div>
+        <div class="nav-user" id="nav-user">
+            <span id="user-greeting">Welcome</span>
+            <a href="profile.html" class="btn btn-small btn-profile" id="profile-btn" style="display:none;">My Profile</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <nav>
+                <a href="index.html">← Home</a>
+            </nav>
+            <h1>Breathing Exercise</h1>
+        </header>
+        
+        <main>
+            <section class="breathing-container">
+                <div class="breathing-circle" id="breathing-circle">
+                    <div class="breathing-text" id="breathing-text">Breathe In</div>
+                </div>
+                
+                <div class="controls">
+                    <div class="exercise-type">
+                        <button class="btn btn-primary active" data-type="4-7-8">4-7-8 Exercise</button>
+                        <button class="btn btn-secondary" data-type="box">Box Breathing</button>
+                        <button class="btn btn-secondary" data-type="relax">Deep Breathing</button>
+                    </div>
+                    
+                    <div class="timer-controls">
+                        <div class="timer-display">
+                            <span id="time-display">05:00</span>
+                            <small>Duration</small>
+                        </div>
+                        <div class="timer-buttons">
+                            <button id="start-btn" class="btn btn-primary">Start</button>
+                            <button id="pause-btn" class="btn btn-secondary" disabled>Pause</button>
+                            <button id="reset-btn" class="btn btn-secondary">Reset</button>
+                        </div>
+                        <div class="sound-controls">
+                            <label class="sound-toggle">
+                                <input type="checkbox" id="sound-toggle" checked>
+                                <span>Sound Effects</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="instructions">
+                    <h3>Instructions:</h3>
+                    <div id="instruction-text">
+                        <p><strong>4-7-8 Exercise:</strong> Inhale for 4 seconds, hold for 7 seconds, exhale for 8 seconds</p>
+                        <p>Follow the circle animation and breathing guide to help reduce stress and anxiety.</p>
+                    </div>
+                </div>
+                
+                <div class="session-info" id="session-info">
+                    <p>Time spent: <strong id="session-time">0:00</strong> | Cycles: <strong id="session-cycles">0</strong></p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 <strong>Student Mental Health Self-Check</strong>. All rights reserved.</p>
+            <p>Created by <strong>Vishwajeet S Patil</strong></p>
+        </div>
+    </footer>
+    
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/language.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/breathing.js"></script>
+</body>
+</html>

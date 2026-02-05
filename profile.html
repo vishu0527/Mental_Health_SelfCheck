@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#667eea">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>My Profile - Student Mental Health Self-Check</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/profile.css">
+</head>
+<body>
+    <div class="top-nav">
+        <div class="nav-brand">🧠 Mental Health Self-Check</div>
+        <div class="nav-user" id="nav-user">
+            <span id="user-greeting">Welcome</span>
+            <button class="btn btn-small btn-logout" onclick="handleLogout()">Logout</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <nav>
+                <a href="index.html">← Home</a>
+            </nav>
+            <h1>My Profile & Progress</h1>
+        </header>
+        
+        <main>
+            <!-- User Info Card -->
+            <section class="profile-section">
+                <h2>Your Information</h2>
+                <div class="user-profile-card">
+                    <div class="user-avatar">👤</div>
+                    <div class="user-details">
+                        <h3 id="profile-name">Loading...</h3>
+                        <p class="user-id" id="profile-id">Student ID: </p>
+                        <p class="user-email" id="profile-email">Email: </p>
+                        <p class="user-meta" id="profile-created">Account created: </p>
+                        <p class="user-meta" id="profile-logins">Total logins: </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Progress Statistics -->
+            <section class="profile-section">
+                <h2>Your Progress</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📋</div>
+                        <div class="stat-content">
+                            <h3 id="quiz-count">0</h3>
+                            <p>Quizzes Completed</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">🫁</div>
+                        <div class="stat-content">
+                            <h3 id="breathing-minutes">0</h3>
+                            <p>Breathing Minutes</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-content">
+                            <h3 id="breathing-sessions">0</h3>
+                            <p>Breathing Sessions</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">📚</div>
+                        <div class="stat-content">
+                            <h3 id="tips-viewed">0</h3>
+                            <p>Tips Viewed</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">⭐</div>
+                        <div class="stat-content">
+                            <h3 id="total-sessions">0</h3>
+                            <p>Total Sessions</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">🏆</div>
+                        <div class="stat-content">
+                            <h3 id="last-quiz-score">-</h3>
+                            <p>Last Quiz Score</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Activity -->
+            <section class="profile-section">
+                <h2>Recent Activity</h2>
+                <div class="activity-timeline">
+                    <div class="activity-item" id="activity-template" style="display: none;">
+                        <div class="activity-icon">📌</div>
+                        <div class="activity-content">
+                            <p class="activity-text"></p>
+                            <small class="activity-date"></small>
+                        </div>
+                    </div>
+                    <div id="activities-container">
+                        <p class="no-activity">No recent activity yet. Start your wellness journey!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Achievement Badges -->
+            <section class="profile-section">
+                <h2>🏅 Achievements</h2>
+                <div class="badges-grid">
+                    <div class="badge" id="badge-first-breathing" data-unlock="1-breathing" title="Complete your first breathing exercise">
+                        <div class="badge-icon">🫁</div>
+                        <p>First Breath</p>
+                    </div>
+                    <div class="badge" id="badge-first-quiz" data-unlock="1-quiz" title="Complete your first mood check">
+                        <div class="badge-icon">📋</div>
+                        <p>First Check</p>
+                    </div>
+                    <div class="badge" id="badge-5-minutes" data-unlock="5-minutes" title="Complete 5 minutes of breathing">
+                        <div class="badge-icon">⏱️</div>
+                        <p>5-Min Master</p>
+                    </div>
+                    <div class="badge" id="badge-10-sessions" data-unlock="10-sessions" title="Complete 10 breathing sessions">
+                        <div class="badge-icon">🎯</div>
+                        <p>Consistent</p>
+                    </div>
+                    <div class="badge" id="badge-daily" data-unlock="daily" title="Use the app on 7 different days">
+                        <div class="badge-icon">📅</div>
+                        <p>Daily User</p>
+                    </div>
+                    <div class="badge" id="badge-explorer" data-unlock="explorer" title="Try all breathing exercises">
+                        <div class="badge-icon">🧭</div>
+                        <p>Explorer</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Data Management -->
+            <section class="profile-section danger-zone">
+                <h2>⚠️ Data Management</h2>
+                <div class="data-management">
+                    <div class="management-item">
+                        <div>
+                            <h3>Export Data</h3>
+                            <p>Download your progress data as JSON</p>
+                        </div>
+                        <button class="btn btn-secondary" onclick="exportUserData()">Export</button>
+                    </div>
+                    <div class="management-item">
+                        <div>
+                            <h3>Delete Account</h3>
+                            <p>Permanently delete all your data (cannot be undone)</p>
+                        </div>
+                        <button class="btn btn-danger" onclick="deleteAccountConfirm()">Delete</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="profile-section">
+                <p class="privacy-notice">
+                    💚 <strong>Your privacy is important.</strong> All data is stored locally on this device and never transmitted to any server.
+                </p>
+            </section>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 <strong>Student Mental Health Self-Check</strong>. All rights reserved.</p>
+            <p>Created by <strong>Vishwajeet S Patil</strong></p>
+        </div>
+    </footer>
+
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/language.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/profile.js"></script>
+</body>
+</html>

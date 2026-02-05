@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#667eea">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Stress Relief Games</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/games.css">
+</head>
+<body>
+    <div class="top-nav">
+        <div class="nav-brand">🧠 Mental Health Self-Check</div>
+        <div class="nav-user" id="nav-user">
+            <span id="user-greeting">Welcome</span>
+            <a href="profile.html" class="btn btn-small btn-profile" id="profile-btn" style="display:none;">My Profile</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <nav>
+                <a href="index.html">← Home</a>
+            </nav>
+            <h1 data-i18n="games_title">Stress Relief Games</h1>
+            <p class="subtitle" data-i18n="games_subtitle">Relax and have fun!</p>
+        </header>
+        
+        <main>
+            <section class="games-intro">
+                <p>Take a break and enjoy some relaxing games to reduce stress and anxiety.</p>
+            </section>
+
+            <!-- Games Grid -->
+            <section class="games-grid">
+                <!-- Memory Match Game -->
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3 data-i18n="game_memory">Memory Match</h3>
+                        <span class="game-difficulty">Easy</span>
+                    </div>
+                    <div class="game-preview">🎴</div>
+                    <p>Test your memory and focus. Match pairs of cards!</p>
+                    <button class="btn btn-primary" onclick="startMemoryGame()">Play</button>
+                </div>
+
+                <!-- Color Match Game -->
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3 data-i18n="game_color_match">Color Match</h3>
+                        <span class="game-difficulty">Medium</span>
+                    </div>
+                    <div class="game-preview">🌈</div>
+                    <p>Match colors and test your reaction time!</p>
+                    <button class="btn btn-primary" onclick="startColorGame()">Play</button>
+                </div>
+
+                <!-- Breathing Balloon Game -->
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3 data-i18n="game_breathing_balloon">Breathing Balloon</h3>
+                        <span class="game-difficulty">Relaxing</span>
+                    </div>
+                    <div class="game-preview">🎈</div>
+                    <p>Inflate a balloon by breathing. A calming exercise!</p>
+                    <button class="btn btn-primary" onclick="startBalloonGame()">Play</button>
+                </div>
+
+                <!-- Puzzle Game -->
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3 data-i18n="game_puzzle">Puzzle Game</h3>
+                        <span class="game-difficulty">Hard</span>
+                    </div>
+                    <div class="game-preview">🧩</div>
+                    <p>Solve relaxing puzzles to keep your mind engaged!</p>
+                    <button class="btn btn-primary" onclick="startPuzzleGame()">Play</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Game Modals -->
+    <!-- Memory Match Game Modal -->
+    <div id="memory-game-modal" class="game-modal" style="display: none;">
+        <div class="game-modal-content">
+            <div class="game-modal-header">
+                <h2>Memory Match</h2>
+                <button class="close-btn" onclick="closeGame('memory')">&times;</button>
+            </div>
+            <div class="game-modal-body">
+                <div class="game-stats">
+                    <p>Score: <strong id="memory-score">0</strong> | Moves: <strong id="memory-moves">0</strong></p>
+                </div>
+                <div id="memory-board" class="memory-board"></div>
+                <button class="btn btn-secondary" onclick="resetMemoryGame()" style="margin-top: 20px;">Reset Game</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Color Match Game Modal -->
+    <div id="color-game-modal" class="game-modal" style="display: none;">
+        <div class="game-modal-content">
+            <div class="game-modal-header">
+                <h2>Color Match</h2>
+                <button class="close-btn" onclick="closeGame('color')">&times;</button>
+            </div>
+            <div class="game-modal-body">
+                <div class="game-stats">
+                    <p>Score: <strong id="color-score">0</strong> | Time: <strong id="color-time">30</strong>s</p>
+                </div>
+                <div id="color-game-area" class="color-game-area">
+                    <div id="color-display" class="color-display"></div>
+                    <div id="color-buttons" class="color-buttons"></div>
+                </div>
+                <button class="btn btn-secondary" onclick="resetColorGame()" style="margin-top: 20px;">Reset Game</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breathing Balloon Modal -->
+    <div id="balloon-game-modal" class="game-modal" style="display: none;">
+        <div class="game-modal-content">
+            <div class="game-modal-header">
+                <h2>Breathing Balloon</h2>
+                <button class="close-btn" onclick="closeGame('balloon')">&times;</button>
+            </div>
+            <div class="game-modal-body">
+                <p class="game-instruction">Click or press SPACE to inflate the balloon. Reach 100% to win!</p>
+                <div class="balloon-container">
+                    <div id="balloon" class="balloon"></div>
+                    <div id="balloon-percentage" class="balloon-percentage">0%</div>
+                </div>
+                <div class="game-stats">
+                    <p>Fill: <strong id="balloon-fill">0</strong>%</p>
+                </div>
+                <button class="btn btn-secondary" onclick="resetBalloonGame()" style="margin-top: 20px;">Reset Game</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Puzzle Game Modal -->
+    <div id="puzzle-game-modal" class="game-modal" style="display: none;">
+        <div class="game-modal-content">
+            <div class="game-modal-header">
+                <h2>Puzzle Game</h2>
+                <button class="close-btn" onclick="closeGame('puzzle')">&times;</button>
+            </div>
+            <div class="game-modal-body">
+                <div class="game-stats">
+                    <p>Score: <strong id="puzzle-score">0</strong> | Level: <strong id="puzzle-level">1</strong></p>
+                </div>
+                <div id="puzzle-board" class="puzzle-board"></div>
+                <button class="btn btn-secondary" onclick="resetPuzzleGame()" style="margin-top: 20px;">Reset Game</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 <strong>Student Mental Health Self-Check</strong>. All rights reserved.</p>
+            <p>Created by <strong>Vishwajeet S Patil</strong></p>
+        </div>
+    </footer>
+
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/language.js"></script>
+    <script src="assets/js/games.js"></script>
+</body>
+</html>

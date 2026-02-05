@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#667eea">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Student Mental Health Self-Check</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="top-nav">
+        <div class="nav-brand">🧠 Mental Health Self-Check</div>
+        <div class="nav-user" id="nav-user">
+            <span id="user-greeting">Welcome</span>
+            <button class="btn btn-small btn-logout" onclick="handleLogout()" style="display:none;" id="logout-btn">Logout</button>
+            <a href="profile.html" class="btn btn-small btn-profile" id="profile-btn" style="display:none;">My Profile</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Student Mental Health Self-Check</h1>
+            <p class="subtitle">A privacy-first approach to mental wellness</p>
+        </header>
+        
+        <main>
+            <section class="intro">
+                <h2>How are you feeling today?</h2>
+                <p>This is a safe, private space to check in with yourself. Your responses are stored only on your device and never leave it.</p>
+            </section>
+            
+            <section class="actions">
+                <a href="quiz.html" class="btn btn-primary">Take Mood Check</a>
+                <a href="breathing.html" class="btn btn-secondary">Breathing Exercise</a>
+                <a href="tips.html" class="btn btn-secondary">Stress Tips</a>
+                <a href="games.html" class="btn btn-secondary">🎮 Stress Games</a>
+                <a href="help.html" class="btn btn-danger">Emergency Help</a>
+            </section>
+            
+            <section class="disclaimer">
+                <h3>Important Notice</h3>
+                <p>This tool is for self-assessment purposes only and is not a substitute for professional medical advice. If you're in crisis, please contact emergency services immediately.</p>
+            </section>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 <strong>Student Mental Health Self-Check</strong>. All rights reserved.</p>
+            <p>Created by <strong>Vishwajeet S Patil</strong></p>
+        </div>
+    </footer>
+
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/language.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

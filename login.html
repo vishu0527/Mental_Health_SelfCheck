@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#667eea">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Login - Student Mental Health Self-Check</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body class="login-body">
+    <div class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <h1>🧠 Mental Health Self-Check</h1>
+                <p class="login-subtitle">Your personal wellness companion</p>
+            </div>
+
+            <form id="login-form" class="login-form">
+                <div class="form-group">
+                    <label for="student-name">Full Name</label>
+                    <input 
+                        type="text" 
+                        id="student-name" 
+                        name="studentName" 
+                        placeholder="Enter your full name" 
+                        required
+                        maxlength="50"
+                    >
+                    <span class="form-error" id="name-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="student-id">Student Number</label>
+                    <input 
+                        type="text" 
+                        id="student-id" 
+                        name="studentId" 
+                        placeholder="Enter your student number" 
+                        required
+                        maxlength="20"
+                    >
+                    <span class="form-error" id="id-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="student-email">Email (Optional)</label>
+                    <input 
+                        type="email" 
+                        id="student-email" 
+                        name="studentEmail" 
+                        placeholder="Enter your email (optional)"
+                    >
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-login">Login</button>
+            </form>
+
+            <div class="login-info">
+                <p>⚠️ <strong>Privacy Notice:</strong> Your data is stored only on this device. No information is sent to any server.</p>
+            </div>
+
+            <div class="existing-user">
+                <p>Existing users on this device:</p>
+                <div id="existing-users" class="existing-users-list">
+                    <!-- Existing users will be listed here -->
+                </div>
+            </div>
+
+            <div class="login-footer">
+                <p class="created-by">Created by <strong>Vishwajeet S Patil</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="login-footer-main">
+        <p>&copy; 2026 Student Mental Health Self-Check. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/login.js"></script>
+</body>
+</html>

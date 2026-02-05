@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#667eea">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Stress Management Tips</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/tips.css">
+</head>
+<body>
+    <div class="top-nav">
+        <div class="nav-brand">🧠 Mental Health Self-Check</div>
+        <div class="nav-user" id="nav-user">
+            <span id="user-greeting">Welcome</span>
+            <a href="profile.html" class="btn btn-small btn-profile" id="profile-btn" style="display:none;">My Profile</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <nav>
+                <a href="index.html">← Home</a>
+            </nav>
+            <h1 data-i18n="tips_title">Stress Management Tips</h1>
+        </header>
+        
+        <main>
+            <!-- Personalized Section -->
+            <section class="personalized-section" id="personalized-section" style="display: none;">
+                <h2 data-i18n="tips_personalized">Personalized Tips Based on Your Assessment</h2>
+                <div class="stress-level-indicator">
+                    <p><span data-i18n="tips_stress_level">Based on your stress level: </span><strong id="stress-level-text">-</strong></p>
+                    <div class="stress-bar" id="stress-bar"></div>
+                </div>
+                <div id="personalized-tips" class="tips-grid"></div>
+            </section>
+
+            <!-- No Quiz Section -->
+            <section class="no-quiz-section" id="no-quiz-section">
+                <div class="no-quiz-box">
+                    <h2>📋 Take Your Mood Check First</h2>
+                    <p data-i18n="tips_no_quiz">Take the mood check quiz to receive personalized tips</p>
+                    <a href="quiz.html" class="btn btn-primary">Take Mood Check Quiz</a>
+                </div>
+            </section>
+
+            <!-- General Tips Section -->
+            <section class="general-tips-section">
+                <h2>💡 General Stress Management Tips</h2>
+                <div class="tips-grid" id="general-tips-container">
+                    <!-- Tips will be loaded here dynamically -->
+                </div>
+            </section>
+
+            <!-- Quick Tips -->
+            <section class="quick-tips-section">
+                <h2>⚡ Quick Stress Relief Techniques</h2>
+                <div class="quick-tips-grid" id="quick-tips-container">
+                    <!-- Quick tips will be loaded here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 <strong>Student Mental Health Self-Check</strong>. All rights reserved.</p>
+            <p>Created by <strong>Vishwajeet S Patil</strong></p>
+        </div>
+    </footer>
+    
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/language.js"></script>
+    <script src="data/tips.json"></script>
+    <script src="assets/js/tips.js"></script>
+</body>
+</html>

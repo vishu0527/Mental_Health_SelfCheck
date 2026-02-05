@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#667eea">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Mood Self-Check Quiz</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/quiz.css">
+</head>
+<body>
+    <div class="top-nav">
+        <div class="nav-brand">🧠 Mental Health Self-Check</div>
+        <div class="nav-user" id="nav-user">
+            <span id="user-greeting">Welcome</span>
+            <a href="profile.html" class="btn btn-small btn-profile" id="profile-btn" style="display:none;">My Profile</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <nav>
+                <a href="index.html">← Home</a>
+            </nav>
+            <h1>Mood Self-Check</h1>
+        </header>
+        
+        <main id="quiz-container">
+            <div id="welcome-screen">
+                <h2>Welcome to your mood check-in</h2>
+                <p>Answer these questions honestly to get a better understanding of your current emotional state. This is for your eyes only.</p>
+                <button id="start-quiz" class="btn btn-primary">Start Quiz</button>
+            </div>
+            
+            <div id="quiz-screen" style="display: none;">
+                <div class="question-container">
+                    <h3 id="question-text"></h3>
+                    <div class="options" id="options-container"></div>
+                </div>
+                <div class="progress">
+                    <span id="progress-text"></span>
+                    <div class="progress-bar">
+                        <div id="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="results-screen" style="display: none;">
+                <h2>Your Results</h2>
+                <div id="results-content"></div>
+                <div class="actions">
+                    <button id="retake-quiz" class="btn btn-secondary">Retake Quiz</button>
+                    <a href="index.html" class="btn btn-primary">Back to Home</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 <strong>Student Mental Health Self-Check</strong>. All rights reserved.</p>
+            <p>Created by <strong>Vishwajeet S Patil</strong></p>
+        </div>
+    </footer>
+    
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/language.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="data/questions.js"></script>
+    <script src="assets/js/quiz.js"></script>
+</body>
+</html>

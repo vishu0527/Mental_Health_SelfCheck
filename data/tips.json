@@ -1,0 +1,134 @@
+{
+    "immediate": [
+        {
+            "title": "5-4-3-2-1 Grounding Technique",
+            "description": "Name 5 things you see, 4 things you can touch, 3 things you hear, 2 things you smell, 1 thing you taste",
+            "duration": "2 minutes",
+            "difficulty": "Easy"
+        },
+        {
+            "title": "Deep Breathing",
+            "description": "Take 5 deep breaths - inhale for 4 counts, hold for 4, exhale for 6",
+            "duration": "1 minute",
+            "difficulty": "Easy"
+        },
+        {
+            "title": "Quick Walk",
+            "description": "Step outside for a 5-minute walk and focus on your surroundings",
+            "duration": "5 minutes",
+            "difficulty": "Easy"
+        },
+        {
+            "title": "Cold Water Splash",
+            "description": "Splash cold water on your face or hold ice cubes in your hands",
+            "duration": "30 seconds",
+            "difficulty": "Easy"
+        },
+        {
+            "title": "Progressive Muscle Relaxation",
+            "description": "Tighten then relax muscle groups from head to toe",
+            "duration": "5 minutes",
+            "difficulty": "Medium"
+        }
+    ],
+    "daily": [
+        {
+            "title": "Morning Meditation",
+            "description": "Start your day with 10 minutes of mindfulness meditation",
+            "duration": "10 minutes",
+            "difficulty": "Medium"
+        },
+        {
+            "title": "Gratitude Journal",
+            "description": "Write down 3 things you're grateful for each day",
+            "duration": "5 minutes",
+            "difficulty": "Easy"
+        },
+        {
+            "title": "Regular Exercise",
+            "description": "30 minutes of moderate exercise most days of the week",
+            "duration": "30 minutes",
+            "difficulty": "Medium"
+        },
+        {
+            "title": "Digital Detox",
+            "description": "Set aside 1 hour each day without screens",
+            "duration": "60 minutes",
+            "difficulty": "Hard"
+        },
+        {
+            "title": "Healthy Sleep Routine",
+            "description": "Maintain consistent sleep schedule and create bedtime routine",
+            "duration": "Daily",
+            "difficulty": "Medium"
+        }
+    ],
+    "long-term": [
+        {
+            "title": "Therapy or Counseling",
+            "description": "Seek professional help for ongoing mental health support",
+            "duration": "Ongoing",
+            "difficulty": "Medium"
+        },
+        {
+            "title": "Build Social Connections",
+            "description": "Nurture relationships and build support networks",
+            "duration": "Ongoing",
+            "difficulty": "Medium"
+        },
+        {
+            "title": "Develop Hobbies",
+            "description": "Engage in activities you enjoy for relaxation and fulfillment",
+            "duration": "Regular",
+            "difficulty": "Easy"
+        },
+        {
+            "title": "Set Boundaries",
+            "description": "Learn to say no and protect your time and energy",
+            "duration": "Ongoing",
+            "difficulty": "Hard"
+        },
+        {
+            "title": "Mindfulness Practice",
+            "description": "Develop regular mindfulness meditation practice",
+            "duration": "Daily",
+            "difficulty": "Medium"
+        }
+    ],
+    "quick_tips": {
+        "5-4-3-2-1": {
+            "title": "5-4-3-2-1 Grounding",
+            "description": "This technique helps bring you back to the present moment during anxiety or panic. Identify: 5 things you can see, 4 things you can touch, 3 things you can hear, 2 things you can smell, and 1 thing you can taste.",
+            "steps": [
+                "Look around and name 5 visible objects",
+                "Notice 4 things you can physically touch",
+                "Listen for 3 distinct sounds",
+                "Identify 2 scents in your environment",
+                "Notice 1 taste in your mouth"
+            ]
+        },
+        "60-seconds": {
+            "title": "60-Second Reset",
+            "description": "A quick reset for when you feel overwhelmed. This simple technique can help you regain focus and calm.",
+            "steps": [
+                "Stop what you're doing",
+                "Take 3 deep breaths",
+                "Drink a glass of water slowly",
+                "Stretch your body",
+                "Return to your task with fresh focus"
+            ]
+        },
+        "progressive": {
+            "title": "Progressive Relaxation",
+            "description": "Systematically tense and relax muscle groups to release physical tension and promote relaxation.",
+            "steps": [
+                "Sit or lie down comfortably",
+                "Tighten your hands for 5 seconds, then release",
+                "Tighten your arms for 5 seconds, then release",
+                "Tighten your shoulders for 5 seconds, then release",
+                "Work your way down your entire body",
+                "Notice the difference between tension and relaxation"
+            ]
+        }
+    }
+}
