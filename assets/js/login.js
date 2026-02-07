@@ -208,7 +208,6 @@ class UserSession {
 // Initialize session management
 const userSession = new UserSession();
 
-// Handle login form
 document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('login-form');
     const existingUsersList = document.getElementById('existing-users');
