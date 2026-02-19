@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="theme-color" content="#667eea">
+    <meta name="theme-color" content="#0a3a5a">
     <meta name="mobile-web-app-capable" content="yes">
     <title>Login - Student Mental Health Self-Check</title>
     <link rel="stylesheet" href="assets/css/style.css">
@@ -13,66 +13,89 @@
 </head>
 <body class="login-body">
     <div class="login-container">
-        <div class="login-box">
-            <div class="login-header">
-                <h1>🧠 Mental Health Self-Check</h1>
-                <p class="login-subtitle">Your personal wellness companion</p>
-            </div>
+        <div class="login-shell">
+            <aside class="login-showcase">
+                <p class="showcase-tag">Student Wellness Platform</p>
+                <h1>Build calm habits that actually stick.</h1>
+                <p class="showcase-copy">Private mood checks, breathing tools, and instant support in one focused experience.</p>
 
-            <form id="login-form" class="login-form">
-                <div class="form-group">
-                    <label for="student-name">Full Name</label>
-                    <input 
-                        type="text" 
-                        id="student-name" 
-                        name="studentName" 
-                        placeholder="Enter your full name" 
-                        required
-                        maxlength="50"
-                    >
-                    <span class="form-error" id="name-error"></span>
+                <div class="showcase-grid">
+                    <article class="showcase-item">
+                        <h3>100% Local Privacy</h3>
+                        <p>Your data stays on this device.</p>
+                    </article>
+                    <article class="showcase-item">
+                        <h3>Fast Daily Check-ins</h3>
+                        <p>Track your mood in minutes.</p>
+                    </article>
+                    <article class="showcase-item">
+                        <h3>Instant Support</h3>
+                        <p>Use live chat and emergency resources.</p>
+                    </article>
+                </div>
+            </aside>
+
+            <section class="login-box" aria-label="Login form">
+                <div class="login-header">
+                    <h2>Mental Health Self-Check</h2>
+                    <p class="login-subtitle">Sign in to continue your wellness journey</p>
                 </div>
 
-                <div class="form-group">
-                    <label for="student-id">Student Number</label>
-                    <input 
-                        type="text" 
-                        id="student-id" 
-                        name="studentId" 
-                        placeholder="Enter your student number" 
-                        required
-                        maxlength="20"
-                    >
-                    <span class="form-error" id="id-error"></span>
+                <form id="login-form" class="login-form">
+                    <div class="form-group">
+                        <label for="student-name">Full Name</label>
+                        <input
+                            type="text"
+                            id="student-name"
+                            name="studentName"
+                            placeholder="Enter your full name"
+                            required
+                            maxlength="50"
+                        >
+                        <span class="form-error" id="name-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="student-id">Student Number</label>
+                        <input
+                            type="text"
+                            id="student-id"
+                            name="studentId"
+                            placeholder="Enter your student number"
+                            required
+                            maxlength="20"
+                        >
+                        <span class="form-error" id="id-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="student-email">Email (Optional)</label>
+                        <input
+                            type="email"
+                            id="student-email"
+                            name="studentEmail"
+                            placeholder="Enter your email"
+                        >
+                    </div>
+
+                    <button type="submit" class="btn btn-login">Enter Dashboard</button>
+                </form>
+
+                <div class="login-info">
+                    <p><strong>Privacy Notice:</strong> No server storage, no tracking, no data sharing.</p>
                 </div>
 
-                <div class="form-group">
-                    <label for="student-email">Email (Optional)</label>
-                    <input 
-                        type="email" 
-                        id="student-email" 
-                        name="studentEmail" 
-                        placeholder="Enter your email (optional)"
-                    >
+                <div class="existing-user">
+                    <p class="existing-title">Existing users on this device</p>
+                    <div id="existing-users" class="existing-users-list">
+                        <!-- Existing users will be listed here -->
+                    </div>
                 </div>
 
-                <button type="submit" class="btn btn-primary btn-login">Login</button>
-            </form>
-
-            <div class="login-info">
-                <p>⚠️ <strong>Privacy Notice:</strong> Your data is stored only on this device. No information is sent to any server.</p>
-            </div>
-
-            <div class="existing-user">
-                <p>Existing users on this device:</p>
-                <div id="existing-users" class="existing-users-list">
-                    <!-- Existing users will be listed here -->
+                <div class="login-footer">
+                    <p class="created-by">Created by <strong>Vishwajeet S Patil</strong></p>
                 </div>
-            </div>
-
-            <div class="login-footer">
-                <p class="created-by">Created by <strong>Vishwajeet S Patil</strong></p>
-            </div>
+            </section>
         </div>
     </div>
 
@@ -81,5 +104,6 @@
     </footer>
 
     <script src="assets/js/login.js"></script>
+    <script src="assets/js/app.js"></script>
 </body>
 </html>
